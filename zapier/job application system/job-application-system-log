@@ -27,8 +27,12 @@ Add the next steps.
 -- This step includes adding the Delay by Zapier to make the reply feel like a real person and more personalized.
 -- I’ve set the Delay For to 1 hour for testing purposes only. For actual use, it would be better to set this to 24 hours so the message feels more natural and human-like.
 
-$$ Step 5 - Automatically send an email response after delay
+## Step 5 - Automatically send an email response after delay
 -- I have setup the dalay and after 1 hour, it should automatically send the responder a automatic response, thanking them for the details.
 --
 
-add after getting data for spreadsheet
+10:48PM - 01-02-2026
+-- I got errors on how it is not able to send to the correct email address. It seems that when making the form, I cannot use the actual test data and have to fill up the form and take the actual data collect to make as a basis for the variables.
+-- once I have done just that, the Zap is working as intended. Samples to be attached.
+
+update on the final outcome
