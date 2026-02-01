@@ -1,0 +1,17 @@
+##Job Application System
+
+## This system takes the data from a job applicant and adds it into a sheet for documentation and easy screening
+
+##Step 1.
+- Made a google form which serves as the starting point to collect data from the job applicant.
+- I publish the form and it is currently active.
+
+##Step 2.
+- Make the first step of Zap and pick the "New Email" as the trigger. Configure and select value as "INBOX (ID:INBOX)".
+- Continue and test the trigger to check the output of configuration. Once I confirmed, the first Zap is ready.
+
+##Step 3.
+- Created a google spreadsheet with the headers (row) of "Name", "Email", "Requested Position", "Job Experience"
+- I have linked this worksheet into the Zap so that every new email that I receive will automatically collected and entered in the database.
+
+Add the next steps.
