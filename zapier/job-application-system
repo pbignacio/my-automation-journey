@@ -1,17 +1,34 @@
 ##Job Application System
 
-## This system takes the data from a job applicant and adds it into a sheet for documentation and easy screening
+## This system collects the data from a job applicant and adds it into a sheet for documentation and easy screening
 
-##Step 1.
+## Step 1.
 - Made a google form which serves as the starting point to collect data from the job applicant.
 - I publish the form and it is currently active.
 
-##Step 2.
+## Step 2.
 - Make the first step of Zap and pick the "New Email" as the trigger. Configure and select value as "INBOX (ID:INBOX)".
 - Continue and test the trigger to check the output of configuration. Once I confirmed, the first Zap is ready.
 
-##Step 3.
+## Step 3.
 - Created a google spreadsheet with the headers (row) of "Name", "Email", "Requested Position", "Job Experience"
 - I have linked this worksheet into the Zap so that every new email that I receive will automatically collected and entered in the database.
 
 Add the next steps.
+
+-- Ok, I have made a mistake initially, instead of keeping the first step as a form, I have kept it as Gmail receving new email, this has been rectified.
+-- after rectifying the mistake, I have set the trigger as "new form response" and configured according to the file name of the form. Tested the form and it came out ok.
+
+## Step 3 again.
+-- Configured so that all data filled according to the forms will reflect on the spreadsheet - It will read the header on the spreadsheet. I have selected according to the correct variable.
+-- Tested the output so everything is ok according to the test.
+
+## Step 4 - Add Delay by Zapier
+-- This step includes adding the Delay by Zapier to make the reply feel like a real person and more personalized.
+-- I’ve set the Delay For to 1 hour for testing purposes only. For actual use, it would be better to set this to 24 hours so the message feels more natural and human-like.
+
+$$ Step 5 - Automatically send an email response after delay
+-- I have setup the dalay and after 1 hour, it should automatically send the responder a automatic response, thanking them for the details.
+--
+
+add after getting data for spreadsheet
