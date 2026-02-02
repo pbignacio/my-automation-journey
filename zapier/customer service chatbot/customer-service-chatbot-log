@@ -1,0 +1,58 @@
+## Customer Service Chatbot (Google Forms, Gmail, Chatgpt, Zapier)
+
+Overview
+
+This system collects job applicant data via a Google Form, stores it in a Google Spreadsheet, chatGPT then analyzes the message using conversation, then sends a reply back to the sender using Gmail.
+
+Workflow Steps
+
+## Step 1: Applicant Data Collection (Google Forms)
+
+-- Created a Google Form to collect applicant details:
+
+-- Customer Name, Email, Issue Description
+
+-- Published the form and confirmed it is active and accepting responses.
+
+## Step 2: Zapier Trigger – New Form Response
+
+-- Created a new Zap.
+-- Selected Google Forms → New Form Response as the trigger.
+-- Connected the correct Google account.
+-- Selected the correct form by file name.
+-- Tested the trigger and confirmed the form data is captured correctly.
+
+## Step 3: Store Applicant Data in Google Sheets
+
+-- Created a Google Spreadsheet with the following headers:
+-- Customer Name, Email, Issue Description
+-- Added Google Sheets → Create Spreadsheet Row as the next Zap step.
+-- Mapped each form field to the corresponding spreadsheet header.
+-- Enabled header-based mapping.
+-- Tested the action and confirmed all form submissions are correctly recorded in the spreadsheet.
+
+## Step 4: Delay Response (Delay by Zapier)
+
+--Added Delay by Zapier → Delay For.
+--Configured a delay of 2 minutes for testing purposes.
+--Planned production delay: 24 hours to simulate a natural, human response time and avoid instant automated replies.
+
+## Step 5: Add ChatGPT to analyse body message
+
+-- added chaptGPT and configured to conversation model
+-- configured on how the chatbot should act or respond to the received message
+-- tested the steps but was not aware that I had to generate an API key from OpenAI and that I have to add credit for ChatGPT to be usable for this step.
+-- after generating an API key and adding credit, ChatGPT is now working as intended.
+-- continued the steps, tested and now it is working.
+
+## Step 5: Send Gmail reply
+
+-- configured to send an email based on the reply or analysing of ChatGPT on the message.
+-- send the email, tested to self first, was working fine.
+
+## Step 6: Field Test
+
+-- Sent the form to real users to fill up and see the final outcome.
+-- worked perfectly, see attached screenshots for proof.
+
+## End
