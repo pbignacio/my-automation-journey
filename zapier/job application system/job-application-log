@@ -1,0 +1,65 @@
+Job Application System (Zapier + Google Forms)
+Overview
+
+This system collects job applicant data via a Google Form, stores it in a Google Spreadsheet for screening, and automatically sends a delayed confirmation email to the applicant.
+
+Workflow Steps
+## Step 1: Applicant Data Collection (Google Forms)
+
+-- Created a Google Form to collect applicant details:
+
+-- Name | Email | Requested Position | Job Experience
+
+-- Published the form and confirmed it is active and accepting responses.
+
+## Step 2: Zapier Trigger – New Form Response
+
+-- Created a new Zap.
+
+-- Selected Google Forms → New Form Response as the trigger.
+
+-- Connected the correct Google account.
+
+-- Selected the correct form by file name.
+
+-- Tested the trigger and confirmed the form data is captured correctly.
+
+⚠️ Correction Note
+-- Initially, the trigger was set as Gmail – New Email, which was incorrect.
+-- This was rectified by switching the trigger to New Form Response, which is the correct starting point for this workflow.
+
+## Step 3: Store Applicant Data in Google Sheets
+
+-- Created a Google Spreadsheet with the following headers:
+
+-- Name, Email, Requested Position, Job Experience
+
+-- Added Google Sheets → Create Spreadsheet Row as the next Zap step.
+
+-- Mapped each form field to the corresponding spreadsheet header.
+
+-- Enabled header-based mapping.
+
+-- Tested the action and confirmed all form submissions are correctly recorded in the spreadsheet.
+
+## Step 4: Delay Response (Delay by Zapier)
+
+-- Added Delay by Zapier → Delay For.
+
+-- Configured a delay of 1 hour for testing purposes.
+
+-- Planned production delay: 24 hours to simulate a natural, human response time and avoid instant automated replies.
+
+## Step 5: Send Automatic Confirmation Email
+
+-- Added Gmail / Email by Zapier → Send Email after the delay step.
+
+-- Configured the email to:
+
+-- Send to the applicant’s email address (from form data)
+
+-- Thank them for submitting their application
+
+-- Confirm receipt of their details
+
+-- Tested the Zap to ensure the email is sent after the delay.
