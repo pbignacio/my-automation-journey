@@ -1,38 +1,83 @@
-##Job Application System
+Job Application Automation System
+📌 Project Overview
 
-## This system collects the data from a job applicant and adds it into a sheet for documentation and easy screening
+This system collects job application data from applicants and automatically stores it in a Google Sheet for documentation and easy screening. It also sends an automated acknowledgment email after a delay to simulate a more human response.
 
-## Step 1.
-- Made a google form which serves as the starting point to collect data from the job applicant.
-- I publish the form and it is currently active.
+🛠 Tools Used
 
-## Step 2.
-- Make the first step of Zap and pick the "New Email" as the trigger. Configure and select value as "INBOX (ID:INBOX)".
-- Continue and test the trigger to check the output of configuration. Once I confirmed, the first Zap is ready.
+Google Forms
 
-## Step 3.
-- Created a google spreadsheet with the headers (row) of "Name", "Email", "Requested Position", "Job Experience"
-- I have linked this worksheet into the Zap so that every new email that I receive will automatically collected and entered in the database.
+Zapier
 
-Add the next steps.
+Gmail
 
--- Ok, I have made a mistake initially, instead of keeping the first step as a form, I have kept it as Gmail receving new email, this has been rectified.
--- after rectifying the mistake, I have set the trigger as "new form response" and configured according to the file name of the form. Tested the form and it came out ok.
+Google Sheets
 
-## Step 3 again.
--- Configured so that all data filled according to the forms will reflect on the spreadsheet - It will read the header on the spreadsheet. I have selected according to the correct variable.
--- Tested the output so everything is ok according to the test.
+🔄 System Workflow
+Step 1: Google Form Setup
 
-## Step 4 - Add Delay by Zapier
--- This step includes adding the Delay by Zapier to make the reply feel like a real person and more personalized.
--- I’ve set the Delay For to 1 hour for testing purposes only. For actual use, it would be better to set this to 24 hours so the message feels more natural and human-like.
+-- Created a Google Form to collect applicant information.
 
-## Step 5 - Automatically send an email response after delay
--- I have setup the dalay and after 1 hour, it should automatically send the responder a automatic response, thanking them for the details.
---
+-- Published the form and confirmed it is active.
 
-10:48PM - 01-02-2026
--- I got errors on how it is not able to send to the correct email address. It seems that when making the form, I cannot use the actual test data and have to fill up the form and take the actual data collect to make as a basis for the variables.
--- once I have done just that, the Zap is working as intended. Samples to be attached.
+Step 2: Zapier Trigger (Corrected)
 
-update on the final outcome
+-- Initially configured the trigger incorrectly as Gmail: New Email.
+
+-- Rectified the mistake by changing the trigger to Google Forms: New Form Response.
+
+-- Selected the correct form file.
+
+-- Tested the trigger using an actual form submission (not test data).
+
+✅ Trigger confirmed working.
+
+Step 3: Google Sheets Integration
+
+-- Created a Google Sheet with the following headers:
+
+-- Name | Email | Requested Position | Job Experience
+
+-- Configured Zapier to map form responses to the correct spreadsheet headers.
+
+-- Tested the action and verified data was logged correctly.
+
+Step 4: Delay by Zapier
+
+-- Added Delay by Zapier to simulate a natural response time.
+
+Configured:
+
+-- Delay For: 1 hour (testing)
+
+-- Recommended Production Delay: 24 hours
+
+Step 5: Automated Email Response
+
+-- Configured Zapier to send an automated acknowledgment email after the delay.
+
+-- Initial error encountered:
+
+-- Email address variable was invalid due to using test data.
+
+Resolution:
+
+-- Submitted an actual form response and remapped variables correctly.
+
+-- Retested successfully.
+
+🧪 Testing & Final Outcome
+
+## 01-02-2026 – 10:48 PM
+
+-- Encountered email delivery errors due to incorrect variable selection.
+
+-- Fixed by using real submission data.
+
+## 02-02-2026 – 7:16 AM
+
+-- Automatic email response received successfully.
+
+-- Zap confirmed working as intended.
+
+✅ Project Completed
