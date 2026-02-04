@@ -1,0 +1,115 @@
+#  Automation Project: AI Powered CRM System
+
+> Goal: This project automatate customer inquiries into a single sheet and auto fills the CRM with the client data/requirement, and then classifies the inquiry/generate lead and then automatically reply.  
+> Tools: Zapier, Google Forms, Google Sheets, Gmail, OpenAI, HubSpot   
+> Status: 🟢 Working 
+> Last Updated: 04-02-2026 
+
+---
+
+## 1) Overview
+
+### What problem does this solve?
+- This solves the problem of manually entering all customer data into your CRM/Sheet, and then drafting emails manually to send to each client.
+- Who benefits: Team/service provider
+- Better tracking, Fewer User input errors.
+
+### Outcome (What it does)
+When: Customer fills out the form, this automation will:
+1. Fill up the CRM customer contact information.
+2. Fill up attached sheet for database purposes.
+3. Identify whether or not there is potential to get from client contact or not.
+4. Optional: Notifications / logging. 
+
+---
+
+## 2) Workflow Diagram (Simple)
+
+[Trigger App/Event]
+      |
+      v
+[Step 1: Action]
+      |
+      v
+[Step 2: Filter/Paths]
+      |
+      v
+[Step 3: Action]
+      |
+      v
+[Final Output / Result]
+
+---
+
+## 3) Zap Details
+
+### Zap Name
+- Zap Title: AI-Powered CRM System
+- Trigger App: Google Forms
+- Main Output: Create CRM entry (HubSpot, Salesforce), Create sheet database, send an email reply to the inquirer.
+
+---
+
+## 4) Step-by-Step Setup
+
+### Step 1 — Trigger
+- App: Google Forms
+- Event Collect customer data
+- Trigger Setup:  
+  - Form / Inbox / Page name
+- Test Result: ✅ Passed 
+- Notes: N/A
+
+---
+
+### Step 2 — HubSpot CRM
+- Type: Action 
+- Rule:  
+  - If Google form is filled → Automatically Create a new contact in HubSpot CRM.
+- Example Input: Google Forms → First Name
+- Example Output: HubSpot → Customer First Name
+- Notes: N/A
+
+---
+
+### Step 3 — Action
+- App: ChatGPT (OpenAI)
+- Event: Classify Text
+- Classfy text into Categories
+  - Hot Lead 
+  - Warm Lead 
+  - Cold Lead 
+- Model: gpt-4o
+- Test Result: ✅ Passed   
+- Notes: N/A
+
+---
+
+### Step 4 — Create Spreadsheet Row
+- Type: Action
+- Connect Spreadsheet - AI-Automation CRM Sheet
+- Assign Headers - First Name | Last Name | Email | Tel no. | Select Service | Lead Source
+
+---
+
+### Step 5 — Split into Paths
+
+- Create 3 Paths
+- Classify each path
+  - Path A - OpenAI : Category - if text contains (Cold Lead)
+  - Path B - OpenAI : Category - if text contains (Warm Lead)
+  - Path C - OpenAI : Category - If text contains (Hot Lead)
+
+### Step 6 — Split into Paths
+- Type: Action
+- Event: Send Gmail - Send New Email
+- Rules:
+  - If Path A - OpenAI : Category - if text contains (Cold Lead) - Send new email with - Template for Cold Lead
+  - IF Path B - OpenAI : Category - if text contains (Warm Lead) - Send new email with - Template for Warm Lead
+  - IF Path C - OpenAI : Category - If text contains (Hot Lead)  - Send new email with - Template for Hot Lead
+Test Result: ✅ Passed 
+
+--- Done
+
+
+
